@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog & Insight — NOVA Consulting</title>
+  <meta name="description" content="Artikel, perspektif, dan wawasan bisnis terkini dari para konsultan NOVA Consulting untuk membantu Anda membuat keputusan strategis yang lebih baik." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .blog-hero{padding-block:calc(var(--nav-height) + 5rem) 5rem;background:var(--color-white-soft);border-bottom:1px solid var(--color-gray-ultra)}
+    .blog-hero-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--color-gray);margin-bottom:1rem}
+    .blog-hero-label::before{content:"";display:block;width:32px;height:1px;background:var(--color-gray-light)}
+    .blog-hero h1{font-family:"Playfair Display",serif;font-size:clamp(2.5rem,5vw,4rem);margin-bottom:1.5rem}
+    .blog-hero p{font-size:1.125rem;color:#4a4a4a;max-width:600px;line-height:1.8}
+    .articles-section{padding-block:5rem}
+    .article-full{margin-bottom:5rem;padding-bottom:5rem;border-bottom:1px solid var(--color-gray-ultra)}
+    .article-full:last-child{border-bottom:none}
+    .article-header{margin-bottom:2rem}
+    .article-meta{display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem}
+    .article-tag{font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:4px 14px;border:1px solid var(--color-gray-ultra);border-radius:9999px;color:#4a4a4a}
+    .article-date{font-size:.875rem;color:#7a7a7a}
+    .article-read-time{font-size:.875rem;color:#7a7a7a}
+    .article-title{font-family:"Playfair Display",serif;font-size:2.25rem;line-height:1.2;margin-bottom:1rem}
+    .article-author{display:flex;align-items:center;gap:.75rem;margin-bottom:2rem}
+    .author-avatar{width:44px;height:44px;border-radius:50%;background:var(--color-gray-ultra);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-weight:700;color:#4a4a4a}
+    .author-name{font-size:.875rem;font-weight:600}
+    .author-role{font-size:.75rem;color:#7a7a7a}
+    .article-img{width:100%;aspect-ratio:16/7;background:linear-gradient(135deg,#f0f0f0,#e0e0e0);display:flex;align-items:center;justify-content:center;font-size:4rem;border-radius:8px;margin-bottom:2rem}
+    .article-body p{font-size:1.0625rem;color:#3a3a3a;line-height:1.9;margin-bottom:1.5rem}
+    .article-body h3{font-family:"Playfair Display",serif;font-size:1.375rem;margin:2rem 0 1rem}
+    .article-body ul{margin:0 0 1.5rem 1.5rem;list-style:disc}
+    .article-body ul li{font-size:1.0625rem;color:#3a3a3a;line-height:1.9;margin-bottom:.5rem}
+    .article-body blockquote{border-left:3px solid var(--color-black);padding:1rem 1.5rem;margin:2rem 0;background:var(--color-white-soft);border-radius:0 8px 8px 0}
+    .article-body blockquote p{margin:0;font-style:italic;color:#4a4a4a}
+    .article-tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:2rem}
+    .article-tag-pill{font-size:.75rem;padding:4px 12px;background:var(--color-white-soft);border:1px solid var(--color-gray-ultra);border-radius:9999px;color:#4a4a4a}
+    .back-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.875rem;font-weight:600;color:#4a4a4a;margin-bottom:3rem;transition:color .2s}
+    .back-link:hover{color:#0a0a0a}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar" class="navbar">
+    <div class="container">
+      <a href="../index.html" class="nav-logo" id="blog-nav-logo">
+        <img src="../assets/images/logo.jpg" alt="NOVA Consulting" width="36" height="36" />
+        <span class="nav-logo-text">NOVA</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="../index.html#about"     class="nav-link">Tentang</a></li>
+          <li><a href="../index.html#services"  class="nav-link">Layanan</a></li>
+          <li><a href="../index.html#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="blog.html"               class="nav-link active">Blog</a></li>
+          <li><a href="../index.html#contact"   class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+      <a href="../index.html#contact" class="btn btn-primary nav-cta" id="blog-nav-cta">Konsultasi Gratis</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="../index.html#about"     class="nav-link">Tentang</a>
+    <a href="../index.html#services"  class="nav-link">Layanan</a>
+    <a href="../index.html#portfolio" class="nav-link">Portfolio</a>
+    <a href="blog.html"               class="nav-link active">Blog</a>
+    <a href="../index.html#contact"   class="nav-link">Kontak</a>
+  </nav>
+
+  <!-- BLOG HERO -->
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-hero-label">Blog & Insight</div>
+      <h1>Perspektif &amp; Wawasan<br><em style="font-style:italic;color:#4a4a4a">Bisnis Terkini</em></h1>
+      <p>Temukan artikel, analisis mendalam, dan perspektif dari para konsultan NOVA untuk membantu Anda membuat keputusan bisnis yang lebih baik.</p>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <section class="articles-section">
+    <div class="container" style="max-width:840px">
+      <a href="../index.html" class="back-link" id="back-home">← Kembali ke Beranda</a>
+
+      <!-- Article 1 -->
+      <article class="article-full reveal" id="article-1">
+        <div class="article-header">
+          <div class="article-meta">
+            <span class="article-tag">Strategi</span>
+            <span class="article-date">15 September 2026</span>
+            <span class="article-read-time">· 7 menit baca</span>
+          </div>
+          <h2 class="article-title">5 Strategi Bisnis yang Wajib Diterapkan di Era AI</h2>
+          <div class="article-author">
+            <div class="author-avatar">N</div>
+            <div>
+              <div class="author-name">Nova Wirasaputra</div>
+              <div class="author-role">Managing Partner, NOVA Consulting</div>
+            </div>
+          </div>
+        </div>
+        <div class="article-img">🤖</div>
+        <div class="article-body">
+          <p>Kecerdasan buatan (AI) bukan lagi sebuah konsep futuristik — ia sudah menjadi realitas yang mengubah lanskap bisnis secara fundamental. Perusahaan yang lambat beradaptasi akan tertinggal, sementara mereka yang bergerak cepat akan meraih keunggulan kompetitif yang signifikan.</p>
+          <h3>1. Identifikasi Use Case AI yang Relevan</h3>
+          <p>Tidak semua proses bisnis perlu diotomasi dengan AI. Mulailah dengan mengidentifikasi area di mana data berlimpah, keputusan berulang, dan dampak bisnis tinggi. Fokus pada kualitas implementasi daripada kuantitas inisiatif.</p>
+          <h3>2. Bangun Data Foundation yang Kuat</h3>
+          <p>AI hanya sebaik data yang dimilikinya. Sebelum mengimplementasikan solusi AI, pastikan perusahaan Anda memiliki infrastruktur data yang terorganisir, bersih, dan mudah diakses. Data governance adalah fondasi yang tidak bisa dikompromikan.</p>
+          <blockquote>
+            <p>"Perusahaan yang menginvestasikan 30% dari anggaran digitalnya untuk data management menghasilkan ROI 5x lebih tinggi dari implementasi AI mereka." — McKinsey Global Institute, 2025</p>
+          </blockquote>
+          <h3>3. Kembangkan Kapabilitas Internal</h3>
+          <p>Ketergantungan pada vendor eksternal menciptakan risiko jangka panjang. Investasi dalam pelatihan tim internal untuk memahami dan mengelola sistem AI adalah strategi yang berkelanjutan.</p>
+          <h3>4. Desain Ulang Proses, Bukan Hanya Otomasi</h3>
+          <p>Kesalahan umum adalah menggunakan AI untuk mengotomasi proses yang sudah tidak efisien. Tantang asumsi yang ada dan rancang ulang proses dari nol dengan mempertimbangkan kemampuan AI sejak awal.</p>
+          <h3>5. Kelola Risiko dan Etika AI</h3>
+          <p>Implementasi AI yang bertanggung jawab membutuhkan framework governance yang jelas: transparansi algoritma, pengurangan bias, kepatuhan regulasi, dan mekanisme human oversight yang memadai.</p>
+          <div class="article-tags">
+            <span class="article-tag-pill">AI Strategy</span>
+            <span class="article-tag-pill">Digital Transformation</span>
+            <span class="article-tag-pill">Business Strategy</span>
+            <span class="article-tag-pill">Innovation</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 2 -->
+      <article class="article-full reveal" id="article-2">
+        <div class="article-header">
+          <div class="article-meta">
+            <span class="article-tag">Keuangan</span>
+            <span class="article-date">1 September 2026</span>
+            <span class="article-read-time">· 5 menit baca</span>
+          </div>
+          <h2 class="article-title">Cara Membaca Laporan Keuangan untuk Keputusan Strategis</h2>
+          <div class="article-author">
+            <div class="author-avatar">D</div>
+            <div>
+              <div class="author-name">Dina Rahardja</div>
+              <div class="author-role">Senior Financial Consultant</div>
+            </div>
+          </div>
+        </div>
+        <div class="article-img">📊</div>
+        <div class="article-body">
+          <p>Banyak pemimpin bisnis yang menghindari laporan keuangan karena tampak rumit dan penuh angka. Padahal, laporan keuangan adalah peta yang menunjukkan kesehatan bisnis Anda secara komprehensif.</p>
+          <h3>Tiga Laporan Keuangan Utama</h3>
+          <p>Ada tiga laporan yang harus Anda pahami: Neraca (Balance Sheet), Laporan Laba Rugi (Income Statement), dan Laporan Arus Kas (Cash Flow Statement). Ketiganya saling melengkapi dan memberikan gambaran utuh tentang kondisi finansial perusahaan.</p>
+          <h3>Rasio Keuangan yang Paling Penting</h3>
+          <ul>
+            <li><strong>Current Ratio</strong>: Mengukur kemampuan perusahaan membayar kewajiban jangka pendek. Idealnya >2.</li>
+            <li><strong>Gross Profit Margin</strong>: Persentase pendapatan yang tersisa setelah biaya produksi. Semakin tinggi semakin baik.</li>
+            <li><strong>Debt-to-Equity Ratio</strong>: Perbandingan utang dengan modal sendiri. Rasio yang terlalu tinggi menandakan risiko finansial.</li>
+            <li><strong>Return on Equity (ROE)</strong>: Seberapa efisien perusahaan menggunakan modal untuk menghasilkan laba.</li>
+          </ul>
+          <h3>Membaca Tren, Bukan Hanya Angka</h3>
+          <p>Satu angka tidak menceritakan banyak hal. Bandingkan laporan keuangan selama 3-5 tahun untuk melihat tren, kemudian bandingkan dengan rata-rata industri untuk konteks yang lebih baik.</p>
+          <blockquote>
+            <p>"Keputusan terbaik dibuat ketika intuisi bisnis bertemu dengan data keuangan yang dibaca dengan benar."</p>
+          </blockquote>
+          <div class="article-tags">
+            <span class="article-tag-pill">Finance</span>
+            <span class="article-tag-pill">Financial Analysis</span>
+            <span class="article-tag-pill">Business Management</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Article 3 -->
+      <article class="article-full reveal" id="article-3">
+        <div class="article-header">
+          <div class="article-meta">
+            <span class="article-tag">Transformasi Digital</span>
+            <span class="article-date">20 Agustus 2026</span>
+            <span class="article-read-time">· 8 menit baca</span>
+          </div>
+          <h2 class="article-title">Digital Transformation: Mengapa 70% Proyek Gagal?</h2>
+          <div class="article-author">
+            <div class="author-avatar">B</div>
+            <div>
+              <div class="author-name">Bimo Saputra</div>
+              <div class="author-role">Digital Transformation Lead</div>
+            </div>
+          </div>
+        </div>
+        <div class="article-img">⚠️</div>
+        <div class="article-body">
+          <p>Statistik ini mengejutkan: penelitian dari McKinsey, BCG, dan berbagai lembaga global menunjukkan bahwa 70% inisiatif transformasi digital gagal mencapai tujuannya. Mengapa hal ini terjadi, dan bagaimana cara menghindarinya?</p>
+          <h3>Kesalahan #1: Terlalu Fokus pada Teknologi</h3>
+          <p>Transformasi digital bukan tentang membeli teknologi terbaru. Banyak perusahaan gagal karena mengira mengimplementasikan sistem ERP baru atau platform cloud sudah cukup. Teknologi hanyalah enabler — yang menentukan keberhasilan adalah manusia dan proses.</p>
+          <h3>Kesalahan #2: Kurangnya Komitmen Kepemimpinan</h3>
+          <p>Transformasi digital tidak bisa didelegasikan sepenuhnya. Pemimpin puncak harus terlibat aktif, bukan hanya memberikan anggaran. Tanpa sponsorship eksekutif yang kuat, inisiatif akan kehilangan momentum dan prioritas di tengah jalan.</p>
+          <h3>Kesalahan #3: Mengabaikan Change Management</h3>
+          <p>Resistensi terhadap perubahan adalah musuh terbesar transformasi. Karyawan yang takut kehilangan pekerjaan atau tidak memahami manfaat perubahan akan secara aktif maupun pasif menghambat implementasi.</p>
+          <blockquote>
+            <p>"Transformasi digital yang sukses mengalokasikan setidaknya 30% dari anggaran untuk change management dan pengembangan kapasitas manusia."</p>
+          </blockquote>
+          <h3>Formula Keberhasilan: People, Process, Technology</h3>
+          <ul>
+            <li><strong>People</strong>: Investasi dalam upskilling, komunikasi yang transparan, dan budaya inovasi.</li>
+            <li><strong>Process</strong>: Redesain proses bisnis sebelum mengotomasi. Jangan otomasi proses yang rusak.</li>
+            <li><strong>Technology</strong>: Pilih teknologi yang sesuai kebutuhan, bukan yang paling canggih.</li>
+          </ul>
+          <p>Dengan pendekatan holistik yang memprioritaskan ketiga elemen ini secara seimbang, peluang keberhasilan transformasi digital meningkat drastis dari 30% menjadi di atas 80%.</p>
+          <div class="article-tags">
+            <span class="article-tag-pill">Digital Transformation</span>
+            <span class="article-tag-pill">Change Management</span>
+            <span class="article-tag-pill">Leadership</span>
+            <span class="article-tag-pill">Strategy</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <span class="footer-brand-name">NOVA Consulting</span>
+          <p>Mitra strategis terpercaya untuk bisnis yang ingin bertumbuh.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" id="blog-footer-li">in</a>
+            <a href="#" class="social-link" id="blog-footer-tw">𝕏</a>
+            <a href="#" class="social-link" id="blog-footer-ig">IG</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navigasi</div>
+          <ul class="footer-links">
+            <li><a href="../index.html#about"     class="footer-link">Tentang Kami</a></li>
+            <li><a href="../index.html#services"  class="footer-link">Layanan</a></li>
+            <li><a href="../index.html#portfolio" class="footer-link">Portfolio</a></li>
+            <li><a href="blog.html"               class="footer-link">Blog</a></li>
+            <li><a href="../index.html#contact"   class="footer-link">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Layanan</div>
+          <ul class="footer-links">
+            <li><a href="../index.html#services" class="footer-link">Strategi Bisnis</a></li>
+            <li><a href="../index.html#services" class="footer-link">Transformasi Digital</a></li>
+            <li><a href="../index.html#services" class="footer-link">Manajemen Risiko</a></li>
+            <li><a href="../index.html#services" class="footer-link">Keuangan & Investasi</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Kontak</div>
+          <ul class="footer-links">
+            <li><span class="footer-link">📍 Jl. Sudirman No. 88, Jakarta</span></li>
+            <li><a href="tel:+622155551234"              class="footer-link">📞 +62 21 5555 1234</a></li>
+            <li><a href="mailto:hello@novaconsulting.id" class="footer-link">✉️ hello@novaconsulting.id</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 NOVA Consulting. Hak Cipta Dilindungi.</span>
+        <a href="../index.html" style="color:#7a7a7a">← Kembali ke Beranda</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>
