@@ -1,4 +1,4 @@
-﻿# NOVA Consulting — Company Profile Website
+# NOVA Consulting — Company Profile Website
 
 > Website company profile modern dan elegan untuk perusahaan konsultan profesional, dibangun dengan HTML, CSS, dan JavaScript murni tanpa framework.
 
@@ -6,7 +6,7 @@
 
 ## 🌐 Live Demo
 
-🔗 **[novaconsulting-profile.github.io](https://your-username.github.io/sawala_project/)**
+🔗 **[RakaGanteng27.github.io/project_sawala](https://RakaGanteng27.github.io/project_sawala/)**
 
 ---
 
